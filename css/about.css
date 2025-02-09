@@ -1,0 +1,47 @@
+ul li{
+    list-style:none;
+}
+ul{
+    list-style:none;
+}
+/* header */
+header div nav ul li{
+    float: left;
+    width: 25%;
+}
+
+article:nth-of-type(1) div{
+	float: left;
+	width: 40%;
+	margin: 0% 2% 2% 2%;
+}
+article:nth-of-type(1)::after{
+    clear: both;
+
+}
+article div figure:nth-of-type(1){
+    margin-bottom: 21%;
+}
+article:nth-of-type(1){
+    border-bottom: 1px solid black;
+}
+article figure ul li{
+    float: left;
+    width: 20%;
+}
+article figure ul li img{
+    max-width: 25px;
+    max-height: 25px;
+    margin: 5px;
+    transition: 1s;
+}
+article:nth-of-type(2) ul li{
+    float: left;
+    width: 15%;
+    margin-right: 20px;
+}
+article:nth-of-type(2) ul li img{
+    max-width: 200px;
+    max-height: 250px;
+    transition: 1s;
+}
