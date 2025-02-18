@@ -6,6 +6,8 @@
     <meta name="description" content="Tattoo artist booking page.">
     <title>Booking - Tattoo Art</title>
     <link rel="stylesheet" href="css/booking.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="js/animation.js"></script> <!-- Link to external JS file -->
 </head>
 <body>
 <!-- Header -->
@@ -23,16 +25,16 @@
     </div>
 </header>
 
-<!-- Hero Section -->
+<!-- Hero Section with Animation -->
 <section class="hero">
+    <canvas id="backgroundCanvas"></canvas>
     <h1>Your Next Tattoo Awaits</h1>
 </section>
 
 <!-- Main Content -->
 <main>
     <h1>Booking</h1>
-    <p>Bring your tattoo ideas to life with Avery, Follow the steps below to book your appointment.
-        We recommend checking our gallery for inspiration.</p>
+    <p>Bring your tattoo ideas to life with Avery. Follow the steps below to book your appointment. We recommend checking our gallery for inspiration.</p>
 
     <div class="booking-section">
         <div>
@@ -41,7 +43,7 @@
         </div>
         <div>
             <h3>Booking Status</h3>
-            <p>Booking are currently CLOSED.</p>
+            <p>Booking is currently CLOSED.</p>
         </div>
     </div>
 
@@ -53,7 +55,7 @@
 
 <!-- Footer -->
 <footer>
-    <p>&copy; 2025 Avery Lessard. All rights reserved. CTRL Freaks</a>.</p>
+    <p>2025 Avery Lessard. All rights reserved.</p>
 </footer>
 </body>
 </html>
