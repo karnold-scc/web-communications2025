@@ -1,0 +1,70 @@
+@font-face {
+    font-family: "RoshidaValentine";
+    src: url('fonts/Roshida Valentines.ttf') format('truetype');
+}
+
+header {
+    background-color: rgb(192, 192, 192);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header > div > h1 {
+    margin-top: 2%;
+    margin-bottom: 0;
+    min-height: 100px;
+    font-size: 80px;
+    font-family: "RoshidaValentine";
+}
+header > div > img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.nameLogo {
+    display: inline-flex;
+    margin-top: auto;
+    max-height: 100px;
+    display: inline-flex;
+    float: left;
+    gap: 20px;
+}
+
+header > nav {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+header > div > h1, img{
+    display: block;
+}
+
+header  > nav > ul {
+    display: inline-flex;
+}
+
+header > nav > ul > li {
+    cursor: pointer;
+    font-size: 40px;
+    display: block;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+header > nav > ul > li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3) {
+    border-right: 2px solid black
+}
+
+body > h1 {
+    margin-top: 5%;
+}
+
+body > div {
+    display: flex;
+}
+
+body > div > p, img {
+    display: block;
+    background-color: rgb(192, 192, 192);
+}
