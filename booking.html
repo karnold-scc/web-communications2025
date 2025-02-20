@@ -3,29 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>booking</title>
+    <meta name="description" content="Tattoo artist booking page.">
+    <title>Booking - Tattoo Art</title>
+    <link rel="stylesheet" href="css/booking.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="js/booking.js"></script> <!-- Link to external JS file -->
 </head>
+<body>
+<!-- Header -->
 <header>
     <div>
-        <h1>Name/Title</h1>
+        <h1>Avery Lessard</h1>
         <nav>
             <ul>
-                <li>about</li>
-                <li>booking</li>
-                <li>aftercare</li>
-                <li>gallery</li>
+                <li class="about">about</li>
+                <li class="booking">booking</li>
+                <li class="aftercare">aftercare</li>
+                <li class="gallery">gallery</li>
             </ul>
         </nav>
     </div>
 </header>
-<body>
-    <h1>booking</h1>
-    <p>instructions for booking</p>
-    <div>
-        <h2>booking link</h2>
-        <h3>booking status</h3>
-    </div>
-</body>
 
-<footer></footer>
+<!-- Hero Section with Animation -->
+<section class="hero">
+    <canvas id="backgroundCanvas"></canvas>
+    <h1>Your Next Tattoo Awaits</h1>
+</section>
+
+<!-- Main Content -->
+<main>
+    <h1>Booking</h1>
+    <p>Bring your tattoo ideas to life with Avery. Follow the steps below to book your appointment. We recommend checking our gallery for inspiration.</p>
+
+    <div class="booking-section">
+        <div>
+            <h2>Booking Link</h2>
+            <a href="#" class="button-primary">Book Now</a>
+        </div>
+        <div>
+            <h3>Booking Status</h3>
+            <p>Booking is currently CLOSED.</p>
+        </div>
+    </div>
+
+    <!-- Gallery Link -->
+    <div class="gallery-link">
+        <p>Need inspiration? Explore our <a href="#">Gallery</a> to view the latest artworks and tattoos.</p>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>2025 Avery Lessard. All rights reserved.</p>
+</footer>
+</body>
 </html>
