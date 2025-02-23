@@ -11,12 +11,14 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.z = 7;
 
 // Load textures (images) for the sprites using TextureLoader
-// These images are used as the visual
+// Update this array with 6 image file paths
 const textures = [
-    "images/k4.png",
     "images/k2.png",
     "images/k3.png",
-
+    "images/k4.png",
+    "images/k5.png",
+    "images/k6.png",
+    "images/k7.png"
 ].map(src => new THREE.TextureLoader().load(src));
 
 // Create sprites from the textures, configure their properties, and add them to the scene
