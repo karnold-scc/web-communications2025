@@ -10,18 +10,18 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #1b1b1b;
-    color: #f4f4f4;
+    background: #f5f5dc; /* Beige */
+    color: #654321; /* Brown */
 }
 
 /* header */
 header {
-    background-color: #111;
+    background-color: #c4a484; /* Light brown */
     padding: 1.5rem 2rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
 }
 
 header div {
@@ -33,32 +33,30 @@ header div {
 header h1 {
     font-family: "RoshidaValentine", sans-serif;
     font-size: 2.5rem;
-    color: #e63946;
+    color: #654321; /* Brown */
 }
+
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
+
 nav ul li {
     margin-left: 1.5rem;
     font-size: 1rem;
     text-transform: uppercase;
     cursor: pointer;
+    color: #654321; /* Brown */
 }
+
 nav ul li:hover {
-    color: #e63946;
+    color: #866442; /* Medium brown */
     text-decoration: underline;
 }
+
 /* Hero Section */
-.hero {
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* Hero Section with Canvas */
 .hero {
     position: relative;
     height: 50vh;
@@ -66,7 +64,7 @@ nav ul li:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
+    background: #eedc9c; /* Sand beige */
 }
 
 .hero canvas {
@@ -83,8 +81,8 @@ nav ul li:hover {
     z-index: 1;
     font-family: "RoshidaValentine", sans-serif;
     font-size: 3rem;
-    color: #f4f4f4;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: #5a3915; /* Dark brown */
+    text-shadow: 2px 2px 5px rgba(101, 67, 33, 0.7); /* Brown shadow */
     text-transform: uppercase;
 }
 
@@ -95,23 +93,23 @@ main {
 
 h1, h2, h3 {
     font-family: 'Roboto', sans-serif;
-    color: #e63946;
+    color: #5a3915; /* Dark brown */
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
 p {
     line-height: 1.8;
-    color: #cfcfcf;
+    color: #6b4226; /* Light brown */
     font-family: 'Roboto', sans-serif;
 }
 
 /* Booking Section */
 .booking-section {
-    background: #2c2c2c;
+    background: #dabe8e; /* Light beige/brown */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(101, 67, 33, 0.3); /* Brown shadow */
     margin-top: 2rem;
 }
 
@@ -123,8 +121,8 @@ p {
     font-family: "RoshidaValentine", sans-serif;
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #e63946;
-    color: #f4f4f4;
+    background: #654321; /* Brown */
+    color: #f5f5dc; /* Beige */
     text-decoration: none;
     border-radius: 5px;
     text-transform: uppercase;
@@ -132,7 +130,7 @@ p {
 }
 
 .button-primary:hover {
-    background: #c53036;
+    background: #5a3915; /* Darker brown */
     transform: translateY(-3px);
     transition: all 0.3s ease;
 }
@@ -148,28 +146,132 @@ p {
     font-size: 1.2rem;
     text-decoration: underline;
     font-weight: bold;
-    color: #e63946;
+    color: #654321; /* Brown */
 }
 
 .gallery-link a:hover {
-    color: #f95d6a;
-    text-shadow: 0 0 5px rgba(255, 87, 94, 0.6);
+    color: #866442; /* Medium brown */
+    text-shadow: 0 0 5px rgba(101, 67, 33, 0.6); /* Brown glow */
 }
 
 /* Footer */
 footer {
-    background: #111;
-    color: #f4f4f4;
+    background: #dabe8e; /* Light beige/brown */
+    color: #654321; /* Brown */
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
 }
 
-footer a {
-    color: #e63946;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+/* Footer Form */
+.footer-form {
+    flex: 1;
+    min-width: 400px;
+    padding-right: 20px;
+}
+
+.footer-note {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #5a3915; /* Darker brown */
+}
+
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #654321; /* Medium brown */
+}
+
+.footer-form input,
+.footer-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #654321; /* Brown */
+    background: #f5f5dc; /* Beige */
+    color: #654321; /* Brown */
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-form textarea {
+    min-height: 100px;
+}
+
+.submit-button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #654321; /* Brown */
+    color: #f5f5dc; /* Beige */
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #5a3915; /* Darker brown */
+}
+
+/* Map Section */
+.footer-map {
+    flex: 1;
+    min-width: 400px;
+}
+
+#customMap {
+    width: 100%;
+    height: 250px;
+    border: none;
+    filter: grayscale(90%) contrast(1.1);
+}
+
+/* Footer Info */
+.footer-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #654321; /* Brown */
+}
+
+.footer-info p {
+    margin-bottom: 15px;
+}
+
+.footer-info a {
+    color: #5a3915; /* Darker brown */
     text-decoration: none;
+    font-weight: bold;
 }
 
-footer a:hover {
+.footer-info a:hover {
     text-decoration: underline;
+    color: #866442; /* Lighter brown */
+}
+
+/* Footer Parking */
+.footer-parking {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6b4226; /* Light brown */
+    margin-top: 20px;
 }

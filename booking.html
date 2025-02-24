@@ -16,10 +16,11 @@
         <h1>Avery Lessard</h1>
         <nav>
             <ul>
-                <li class="about">about</li>
-                <li class="booking">booking</li>
-                <li class="aftercare">aftercare</li>
-                <li class="gallery">gallery</li>
+                <li class="about"><a href="index.html" data-after="about">about</a></li>
+                <li class="booking"><a href="booking.html" data-after="booking">booking</a></li>
+                <li class="aftercare"><a href="aftercare.html" data-after="aftercare">aftercare</a></li>
+                <li class="gallery"><a href="gallery.html" data-after="gallery">gallery</a></li>
+
             </ul>
         </nav>
     </div>
@@ -55,7 +56,61 @@
 
 <!-- Footer -->
 <footer>
-    <p>2025 Avery Lessard. All rights reserved.</p>
+    <div class="footer-container">
+        <!-- Left Side: Contact Form -->
+        <div class="footer-form">
+            <p class="footer-note">ALL CLIENTS MUST BE 18 YEARS OLD OR OLDER.</p>
+            <hr>
+            <form action="#" method="post">
+                <label for="first-name">NAME <span>(REQUIRED)</span></label>
+                <div class="name-container">
+                    <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                    <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                </div>
+
+                <label for="email">EMAIL ADDRESS <span>(REQUIRED)</span></label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="phone">PHONE <span>(REQUIRED)</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+                <label for="subject">SUBJECT <span>(REQUIRED)</span></label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+                <label for="message">MESSAGE <span>(REQUIRED)</span></label>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="submit-button">SUBMIT</button>
+            </form>
+        </div>
+
+        <!-- Right Side: Embedded Google Map & Info -->
+        <div class="footer-map">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.132707992347!2d-83.03893092459844!3d42.31683913809273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d25a8a4bafb%3A0xd60b2e3b5ada7ce2!2s490%20Pelissier%20St%2C%20Windsor%2C%20ON%20N9A%204K9%2C%20Canada!5e0!3m2!1sen!2sca!4v1698520889452!5m2!1sen!2sca"
+                    width="100%"
+                    height="250"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="footer-info">
+                <p><strong>Avery Lessard - Inkwell Tattoos Windsor</strong><br>
+                    490 Pelissier Street, Windsor, Ontario, N9A 4K9<br>
+                    CANADA</p>
+
+                <p><strong>HOURS</strong><br>
+                    MONDAY-TUESDAY: CLOSED<br>
+                    WEDNESDAY-SUNDAY: 1:00PM-8:00PM</p>
+
+                <p><strong>CONTACT</strong><br>
+                    <a href="mailto:lessardtattoos@gmail.com">lessardtattoos@gmail.com</a></p>
+
+                <p class="footer-parking">PARKING AVAILABLE NEAR THE STUDIO.</p>
+            </div>
+        </div>
+    </div>
 </footer>
 </body>
 </html>
