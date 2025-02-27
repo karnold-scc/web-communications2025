@@ -36,14 +36,14 @@ header h1 {
     color: #654321; /* Brown */
 }
 
-nav ul {
+header nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-nav ul li {
+header nav ul li {
     margin-left: 1.5rem;
     font-size: 1rem;
     text-transform: uppercase;
@@ -51,7 +51,16 @@ nav ul li {
     color: #654321; /* Brown */
 }
 
-nav ul li:hover {
+header nav ul li:hover {
     color: #866442; /* Medium brown */
     text-decoration: underline;
 }
+
+/* Body */
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #5a3915; /* Dark brown */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
