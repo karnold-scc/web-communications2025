@@ -1,10 +1,12 @@
+/* Font */
 @font-face {
     font-family: "RoshidaValentine";
-    src: url('fonts/Roshida Valentines.ttf') format('truetype');
+    src: url("../fonts/Roshida\ Valentines.ttf") format('truetype');
 }
 
-header {
-    background-color: rgb(192, 192, 192);
+
+/* header {
+    background-color: #dabe8e;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,10 +56,56 @@ header > nav > ul > li {
 
 header > nav > ul > li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3) {
     border-right: 2px solid black
+} */
+ /* header */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f5f5dc; /* Beige */
+    color: #654321; /* Brown */
 }
 
-body > h1 {
-    margin-top: 5%;
+
+header {
+    background-color: #c4a484; /* Light brown */
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: "RoshidaValentine", sans-serif;
+    font-size: 2.5rem;
+    color: #654321; /* Brown */
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #654321; /* Brown */
+}
+
+nav ul li:hover {
+    color: #866442; /* Medium brown */
+    text-decoration: underline;
 }
 
 body > div {
@@ -66,5 +114,52 @@ body > div {
 
 body > div > p, img {
     display: block;
-    background-color: rgb(192, 192, 192);
+    background-color: #dabe8e;
+}
+
+footer {
+    background: #dabe8e; /* Light beige/brown */
+    color: #654321; /* Brown */
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #654321; /* Brown */
+}
+
+.footer-info p {
+    margin-bottom: 15px;
+}
+
+.footer-info a {
+    color: #5a3915; /* Darker brown */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+    color: #866442; /* Lighter brown */
+}
+
+/* Footer Parking */
+.footer-parking {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6b4226; /* Light brown */
+    margin-top: 20px;
 }
