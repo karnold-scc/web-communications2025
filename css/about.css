@@ -30,14 +30,29 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    padding: 0.5rem;
+    background-color: #c4a484; /* Light brown */
+    padding: 1.5rem 2rem;
     position: sticky;
     top: 0;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+    display: flex; /* Added to align nav content */
+    justify-content: flex-end; /* Aligns nav to the right */
+    align-items: center; /* Vertically centers content */
+}
+nav {
+    display: flex; /* Flex layout for h1 and ul */
+    justify-content: space-between; /* h1 on left, ul on right */
+    align-items: center; /* Vertically align h1 and ul */
+    width: 100%; /* Ensure nav takes full width */
 }
 
+nav h1 {
+    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #654321;
+    margin-right: 2rem; /* Optional: space between h1 and ul */
+}
 .nav-toggle {
     display: none; /* Hidden by default on large screens */
     background: none;
@@ -53,7 +68,7 @@ header {
 
 nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end; /* Align list items to the right */
     list-style: none;
 }
 
@@ -218,10 +233,50 @@ divider {
 
 /* Footer */
 footer {
-    background: #2c3e50;
-    padding: 1rem;
+    background: #dabe8e; /* Light beige/brown */
+    color: #654321; /* Brown */
     text-align: center;
-    color: #fff;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #654321; /* Brown */
+}
+
+.footer-info p {
+    margin-bottom: 15px;
+}
+
+.footer-info a {
+    color: #5a3915; /* Darker brown */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+    color: #866442; /* Lighter brown */
+}
+
+/* Footer Parking */
+.footer-parking {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6b4226; /* Light brown */
+    margin-top: 20px;
 }
 
 /* Fade-in animation */
@@ -245,8 +300,8 @@ footer {
         top: 100%; /* Position below header */
         left: 0;
         width: 100%;
-        background: #34495e; /* Match header gradient end */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        background-color: #c4a484; /* Light brown */
+        box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
     }
     header.nav-open nav {
         display: block; /* Show when nav-open class is added */
