@@ -1,0 +1,277 @@
+/* Font */
+@font-face {
+    font-family: "RoshidaValentine";
+    src: url("../fonts/Roshida\ Valentines.ttf") format('truetype');
+}
+
+/* global Style */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f5f5dc; /* Beige */
+    color: #654321; /* Brown */
+}
+
+/* header */
+header {
+    background-color: #c4a484; /* Light brown */
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: "RoshidaValentine", sans-serif;
+    font-size: 2.5rem;
+    color: #654321; /* Brown */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #654321; /* Brown */
+}
+
+nav ul li:hover {
+    color: #866442; /* Medium brown */
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 50vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #eedc9c; /* Sand beige */
+}
+
+.hero canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 1;
+    font-family: "RoshidaValentine", sans-serif;
+    font-size: 3rem;
+    color: #5a3915; /* Dark brown */
+    text-shadow: 2px 2px 5px rgba(101, 67, 33, 0.7); /* Brown shadow */
+    text-transform: uppercase;
+}
+
+/* Main Section */
+main {
+    padding: 2rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #5a3915; /* Dark brown */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+p {
+    line-height: 1.8;
+    color: #6b4226; /* Light brown */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Booking Section */
+.booking-section {
+    background: #dabe8e; /* Light beige/brown */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(101, 67, 33, 0.3); /* Brown shadow */
+    margin-top: 2rem;
+}
+
+.booking-section div {
+    margin-bottom: 1.5rem;
+}
+
+.button-primary {
+    font-family: "RoshidaValentine", sans-serif;
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #654321; /* Brown */
+    color: #f5f5dc; /* Beige */
+    text-decoration: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button-primary:hover {
+    background: #5a3915; /* Darker brown */
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+}
+
+/* Gallery Link */
+.gallery-link {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 2rem;
+}
+
+.gallery-link a {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #654321; /* Brown */
+}
+
+.gallery-link a:hover {
+    color: #866442; /* Medium brown */
+    text-shadow: 0 0 5px rgba(101, 67, 33, 0.6); /* Brown glow */
+}
+
+/* Footer */
+footer {
+    background: #dabe8e; /* Light beige/brown */
+    color: #654321; /* Brown */
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    gap: 20px;
+}
+
+/* Footer Form */
+.footer-form {
+    flex: 1;
+    min-width: 400px;
+    padding-right: 20px;
+}
+
+.footer-note {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: #5a3915; /* Darker brown */
+}
+
+.footer-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-form label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #654321; /* Medium brown */
+}
+
+.footer-form input,
+.footer-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #654321; /* Brown */
+    background: #f5f5dc; /* Beige */
+    color: #654321; /* Brown */
+    margin-top: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-form textarea {
+    min-height: 100px;
+}
+
+.submit-button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #654321; /* Brown */
+    color: #f5f5dc; /* Beige */
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: #5a3915; /* Darker brown */
+}
+
+/* Map Section */
+.footer-map {
+    flex: 1;
+    min-width: 400px;
+}
+
+#customMap {
+    width: 100%;
+    height: 250px;
+    border: none;
+    filter: grayscale(90%) contrast(1.1);
+}
+
+/* Footer Info */
+.footer-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #654321; /* Brown */
+}
+
+.footer-info p {
+    margin-bottom: 15px;
+}
+
+.footer-info a {
+    color: #5a3915; /* Darker brown */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+    color: #866442; /* Lighter brown */
+}
+
+/* Footer Parking */
+.footer-parking {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6b4226; /* Light brown */
+    margin-top: 20px;
+}

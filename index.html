@@ -3,68 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Avery Lessard</title>
     <link href="./css/about.css" rel="stylesheet" />
-    <title>about</title>
+    <script src="./js/about.js" defer></script>
 </head>
-<header>
-    <div>
-        <h1>Name/Title</h1>
-        <nav>
-            <ul>
-                <li>about</li>
-                <li>booking</li>
-                <li>aftercare</li>
-                <li>gallery</li>
-            </ul>
-        </nav>
-    </div>
-</header>
 <body>
-<div id="About">
-    <!-- <div class="elfsight-app-90549dba-ff0f-491e-b5ba-ddfb5fe027b7" data-elfsight-app-lazy></div> -->
-    <div>
-        <article>
-            <div>
-                <figure>
-                    <figcaption>
-                        <h1>About.</h1>
-                    </figcaption>
-                    <p>
-                    <h3>
-                        Hi, my name is <strong>Avery Lessard</strong>, and I’m a professional tattoo artist with a passion for creating meaningful, custom body art.
-                    </h3></p>
-                    <p>
-                        I love working closely with my clients to bring their ideas to life. Every tattoo tells a story, and my goal is to make sure each piece is both artistically beautiful and personally significant. With years of experience and a strong focus on safety and precision, I ensure that every client leaves my chair feeling confident and excited about their new ink. Let’s create something amazing together!
-                    </p>
-                </figure>
-                <figure>
-                    <ul>
-                        <h1>Let's Connect</h1>
-                        <li><a href="https://www.facebook.com/sucre.chen.12"><img src="./icon/instagram.png"/></a></li>
-                        <li><a href="https://github.com/sucreqw/"><img src="./icon/facebook.png"/></a></li>
-                        <li><a href="https://www.linkedin.com/in/yunhaochen2023"><img src="./icon/linkedin.png"/></a></li>
-                        <li><a href="https://www.youtube.com/@yunhaochen"><img src="./icon/youtube.png"/></a></li>
-                        <li><a href="mailto:w0847446@myscc.ca"><img src="./icon/search.png"/></a></li>
-                    </ul>
-                </figure>
+<header>
+    <button class="nav-toggle">☰</button>
+    <nav>
+        <h1>Avery Lessard</h1>
+        <ul>
+            <li><a href="index.html" data-after="about">about</a></li>
+            <li><a href="booking.html" data-after="booking">booking</a></li>
+            <li><a href="aftercare.html" data-after="aftercare">aftercare</a></li>
+            <li><a href="gallery.html" data-after="gallery">gallery</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main id="about">
+    <section class="intro">
+        <div class="intro-text">
+            <h1>About</h1>
+            <p>
+                Hi there! My name is <strong>Avery Lessard</strong>,  I am a tattoo artist born and raised in Windsor, Ontario. I started my tattooing journey in 2018 and became a full-time artist in 2020. I graduated from the University of Windsor in 2020 with a Bachelor of Fine Arts and a focus on drawing and painting.
+            </p>
+            <p>
+                I love tattooing in a variety of styles but I mostly practice illustrative black and grey with American Traditional inspiration. I also love tattooing with colour and fine line styles. I am always trying to push my work creatively and try new techniques when given the opportunity.
+            </p>
+            <p>
+                My favourite thing about tattooing is that it allows me to help people tell their story and feel confident in their skin. My goal is to collaborate with my clients to create meaningful and unique tattoos that withstand the test of time. It is important to me to do work that I am proud of and that my client is proud to wear for the rest of their life.
+            </p>
+            <p>
+                Thank you for reading!
+            </p>
+            <aside class="social-links">
+                <h2>Let’s Connect</h2>
+                <ul>
+                    <li><a href="https://www.instagram.com/avelessardtattoos/"><img src="./icon/instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://github.com/sucreqw/"><img src="./icon/facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.linkedin.com/in/yunhaochen2023"><img src="./icon/linkedin.png" alt="LinkedIn"></a></li>
+                    <li><a href="https://www.youtube.com/@yunhaochen"><img src="./icon/youtube.png" alt="YouTube"></a></li>
+                    <li><a href="mailto:lessardtattoos@gmail.com"><img src="./icon/search.png" alt="Email"></a></li>
+                </ul>
+            </aside>
+        </div>
+        <img src="./images/me.png" alt="Avery Lessard" class="profile-img">
+    </section>
+    <divider></divider>
+    <section class="gallery">
+        <div class="recycler-view">
+            <div class="recycler-inner">
+                <img src="./images/me.png" alt="Tattoo Sample 1">
+                <img src="./images/me.png" alt="Tattoo Sample 2">
+                <img src="./images/me.png" alt="Tattoo Sample 3">
+                <img src="./images/me.png" alt="Tattoo Sample 4">
+                <img src="./images/me.png" alt="Tattoo Sample 5">
+                <img src="./images/me.png" alt="Tattoo Sample 6">
+                <!-- Duplicate images for seamless looping -->
+                <img src="./images/me.png" alt="Tattoo Sample 1">
+                <img src="./images/me.png" alt="Tattoo Sample 2">
+                <img src="./images/me.png" alt="Tattoo Sample 3">
+                <img src="./images/me.png" alt="Tattoo Sample 4">
+                <img src="./images/me.png" alt="Tattoo Sample 5">
+                <img src="./images/me.png" alt="Tattoo Sample 6">
             </div>
-            <img src="./images/me.png" alt=""/>
-        </article>
-        <article>
-            <ul>
-                <li><img src="./images/me.png" alt=""/></li>
-                <li><img src="./images/me.png" alt=""/></li>
-                <li><img src="./images/me.png" alt=""/></li>
-                <li><img src="./images/me.png" alt=""/></li>
-                <li><img src="./images/me.png" alt=""/></li>
-                <li><img src="./images/me.png" alt=""/></li>
-            </ul>
-        </article>
+        </div>
+    </section>
+</main>
 
-    </div>
-</div>
-</body>
 <footer>
+    <div class="footer-container">
+        <div class="footer-info">
+            <p><strong>Avery Lessard - Inkwell Tattoos Windsor</strong><br>
+                490 Pelissier Street, Windsor, Ontario, N9A 4K9<br>
+                CANADA</p>
 
+            <p><strong>HOURS</strong><br>
+                MONDAY-TUESDAY: CLOSED<br>
+                WEDNESDAY-SUNDAY: 1:00PM-8:00PM</p>
+
+            <p><strong>CONTACT</strong><br>
+                <a href="mailto:lessardtattoos@gmail.com">lessardtattoos@gmail.com</a></p>
+
+            <p class="footer-parking">PARKING AVAILABLE NEAR THE STUDIO.</p>
+        </div>
+    </div>
 </footer>
+</body>
 </html>
