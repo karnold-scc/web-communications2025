@@ -9,59 +9,6 @@
     src: url("../fonts/Roshida\ Valentines.ttf") format('truetype');
 }
 
-
-/* header {
-    background-color: #dabe8e;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.nameLogo {
-    display: inline-flex;
-    margin-top: auto;
-    max-height: 100px;
-    display: inline-flex;
-    float: left;
-    gap: 20px;
-}
-
-.nameLogo > h1 {
-    display: block;
-    padding-left: 10px;
-    margin-top: 2%;
-    margin-bottom: 0;
-    min-height: 100px;
-    font-size: 80px;
-    font-family: "RoshidaValentine";
-}
-
-.nameLogo > img {
-    display: block;
-    max-width: 200px;
-    max-height: 200px;
-}
-
-header > nav {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-header  > nav > ul {
-    display: inline-flex;
-}
-
-header > nav > ul > li {
-    cursor: pointer;
-    font-size: 40px;
-    display: block;
-    padding-left: 50px;
-    padding-right: 50px;
-}
-
-header > nav > ul > li:nth-of-type(1), li:nth-of-type(2), li:nth-of-type(3) {
-*/
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -70,7 +17,6 @@ body {
     background: #f5f5dc; /* Beige */
     color: #654321; /* Brown */
 }
-
 
 header {
     background-color: #c4a484; /* Light brown */
@@ -112,17 +58,46 @@ nav ul li:hover {
     text-decoration: underline;
 }
 
-body > div {
-    display: flex;
+/* Main Section */
+main {
+    padding: 2rem;
 }
 
-body > div > p {
-    font-size: 30px;
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: #5a3915; /* Dark brown */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
-body > div > p, img {
+p {
+    line-height: 1.8;
+    color: #6b4226; /* Light brown */
+    font-family: 'Roboto', sans-serif;
+}
+
+.aftercare-section {
+    background: #dabe8e; /* Light beige/brown */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(101, 67, 33, 0.3); /* Brown shadow */
+    margin-top: 2rem;
+}
+
+.aftercare-section > div {
+    display: flex
+}
+
+.aftercare-section > div > p {
+    font-size: 1.5rem
+}
+
+.aftercare-section > div > figure
+body > main > div > div > p, img {
     display: block;
     background-color: #dabe8e;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(101, 67, 33, 0.3);
 }
 
 footer {
