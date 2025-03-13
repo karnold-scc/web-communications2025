@@ -57,7 +57,6 @@ nav ul li:hover {
 }
 
 /* Hero Section */
-
 .hero {
     position: relative;
     height: 50vh;
@@ -85,7 +84,7 @@ nav ul li:hover {
     color: #5a3915; /* Dark brown */
     text-shadow: 2px 2px 5px rgba(101, 67, 33, 0.7); /* Brown shadow */
     text-transform: uppercase;
-}*/
+}
 
 /* Main Section */
 main {
