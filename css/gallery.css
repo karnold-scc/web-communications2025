@@ -4,25 +4,39 @@
     src: url("../fonts/Roshida\ Valentines.ttf") format('truetype');
 }
 
-/* global Style */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #f5f5dc; /* Beige */
-    color: #654321; /* Brown */
+/* Load custom fonts */
+@font-face {
+    font-family: 'Lostar';
+    src: url('../fonts/Lostar.ttf') format('truetype');
 }
 
-/* Body */
+@font-face {
+    font-family: 'Grand Paradiso';
+    src: url('../fonts/GrandParadiso-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bellerose';
+    src: url('../fonts/Bellerose.ttf') format('truetype');
+}
+
+
+/* Global Styles */
 h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
     color: #5a3915; /* Dark brown */
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
-/* header */
+body {
+    font-family: 'Bellerose', 'Verdana', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
 header {
     background-color: #c4a484; /* Light brown */
     padding: 1.5rem 2rem;
@@ -30,38 +44,62 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+    display: flex; /* Added to align nav content */
+    justify-content: flex-end; /* Aligns nav to the right */
+    align-items: center; /* Vertically centers content */
+}
+nav {
+    display: flex; /* Flex layout for h1 and ul */
+    justify-content: space-between; /* h1 on left, ul on right */
+    align-items: center; /* Vertically align h1 and ul */
+    width: 100%; /* Ensure nav takes full width */
 }
 
-header div {
+nav h1 {
+    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
+    font-size: 1.5rem; /* Adjust size as needed */
+    color: #654321;
+    margin-right: 2rem; /* Optional: space between h1 and ul */
+}
+.nav-toggle {
+    display: none; /* Hidden by default on large screens */
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: 'Grand Paradiso', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header h1 {
-    font-family: "RoshidaValentine", sans-serif;
-    font-size: 2.5rem;
-    color: #654321; /* Brown */
-}
-
-header nav ul {
-    display: flex;
+    justify-content: flex-end; /* Align list items to the right */
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 nav ul li {
-    margin-left: 1.5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #654321; /* Brown */
+    flex: 1;
+    text-align: center;
 }
 
-nav ul li:hover {
-    color: #866442; /* Medium brown */
-    text-decoration: underline;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Grand Paradiso', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #e74c3c;
+    transform: scale(1.1);
 }
 
 /* Footer */
@@ -75,12 +113,7 @@ footer {
 }
 
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: auto;
-    gap: 20px;
+    margin: 0 auto; 
 }
 
 .footer-info {
@@ -90,7 +123,7 @@ footer {
 }
 
 .footer-info p {
-    margin-bottom: 15px;
+    margin: 10px 0;
 }
 
 .footer-info a {
