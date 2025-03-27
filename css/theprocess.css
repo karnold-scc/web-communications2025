@@ -33,7 +33,7 @@ body {
 
 header {
     background-color: #c4a484; /* Light brown */
-    padding: 1.5rem 2rem;
+    padding: .5rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -48,7 +48,9 @@ header div {
 
 header h1 {
     font-family: "Lostar", sans-serif;
-    font-size: 2.5rem;
+    font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 0;
     color: #654321; /* Brown */
 }
 nav ul {
