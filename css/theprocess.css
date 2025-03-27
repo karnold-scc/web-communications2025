@@ -80,7 +80,7 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
-@media (max-width: 500px){
+@media (max-width: 1000px){
     nav ul li {
         font-size: 3vw;
     }
@@ -139,9 +139,13 @@ li {
 }
 
 .aftercare-section > div > ul > li {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
+.aftercare-section > div > figure {
+    align-self: center;
+}
+
 
 .aftercare-section > div > figure > img {
     display: block;
