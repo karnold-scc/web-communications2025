@@ -1,0 +1,218 @@
+
+/*====================
+        Header
+====================*/
+
+/* Font */
+@font-face {
+    font-family: "RoshidaValentine";
+    src: url("../fonts/Roshida\ Valentines.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Bellarose";
+    src: url("../fonts/Bellerose.ttf") format('truetype');
+}
+@font-face {
+    font-family: "Lostar";
+    src: url("../fonts/Lostar.ttf") format('truetype');
+}
+@font-face {
+    font-family: "GrandParadiso";
+    src: url("../fonts/GrandParadiso-Regular.ttf") format('truetype');
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f9f9f9; /* Beige */
+    color: #654321; /* Brown */
+}
+
+header {
+    background-color: #c4a484; /* Light brown */
+    padding: .5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+}
+
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-family: "Lostar", sans-serif;
+    font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #654321; /* Brown */
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #654321; /* Brown */
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: #654321;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #dabe8e; /* Medium brown */
+    text-decoration: none;
+}
+
+@media (max-width: 1000px){
+    nav ul li {
+        font-size: 3vw;
+    }
+
+}
+
+/*====================
+        Body
+====================*/
+main {
+    padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'GrandParadiso', sans-serif;
+    font-size: 2rem;
+    color: #5a3915; /* Dark brown */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+li {
+    line-height: 1.8;
+    color: #6b4226; /* Light brown */
+    font-family: 'Bellarose', sans-serif;
+}
+
+.aftercare-section {
+    background: #dabe8e; /* Light beige/brown */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(101, 67, 33, 0.3); /* Brown shadow */
+    margin-top: 2rem;
+}
+
+.aftercare-section > h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.aftercare-section > div {
+    display: flex
+}
+
+.aftercare-section > div > ul > hr {
+    max-width: 40%;
+    margin-left: 0;
+    color: #6b4226;
+}
+
+.aftercare-section > div > ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.aftercare-section > div > ul > li {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.aftercare-section > div > figure {
+    align-self: center;
+}
+
+
+.aftercare-section > div > figure > img {
+    display: block;
+    background-color: #dabe8e;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(101, 67, 33, 0.3);
+}
+
+@media (max-width: 1000px){
+    .aftercare-section > div > figure {
+        display: none;
+    }
+    .aftercare-section > div > ul > li {
+        font-size: 1rem;
+    }
+    .aftercare-section > h2 {
+        font-size: 1.5rem;
+    }
+}
+/*====================
+        Footer
+====================*/
+
+footer {
+    background: #dabe8e; /* Light beige/brown */
+    color: #654321; /* Brown */
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: fit-content;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #654321; /* Brown */
+}
+
+.footer-info p {
+    margin-bottom: 15px;
+}
+
+.footer-info a {
+    color: #5a3915; /* Darker brown */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-info a:hover {
+    text-decoration: underline;
+    color: #866442; /* Lighter brown */
+}
+
+/* Footer Parking */
+.footer-parking {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #6b4226; /* Light brown */
+    margin-top: 20px;
+}
