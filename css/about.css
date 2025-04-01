@@ -45,20 +45,23 @@ nav {
     justify-content: space-between; /* h1 on left, ul on right */
     align-items: center; /* Vertically align h1 and ul */
     width: 100%; /* Ensure nav takes full width */
+
+
 }
 
 nav h1 {
     font-family: 'Lostar', 'Grand Paradiso', sans-serif;
-    font-size: 1.5rem; /* Adjust size as needed */
+    font-size: 3rem; /* Adjust size as needed */
     color: #654321;
-    margin-right: 2rem; /* Optional: space between h1 and ul */
+/*    margin-right: 2rem; !* Optional: space between h1 and ul *!
+    margin-bottom: 1rem;*/
 }
 .nav-toggle {
     display: none; /* Hidden by default on large screens */
     background: none;
     border: none;
-    color: #fff;
-    font-family: 'Grand Paradiso', sans-serif;
+    color: #654321;
+    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -75,13 +78,18 @@ nav ul {
 nav ul li {
     flex: 1;
     text-align: center;
+    line-height: 1.8;
+    color: #6b4226; /* Light brown */
+    font-family: 'Bellarose', sans-serif;
 }
 
 nav ul li a {
-    color: #fff;
+
     text-decoration: none;
-    font-family: 'Grand Paradiso', sans-serif;
-    font-size: 1rem;
+    line-height: 1.8;
+    color: #6b4226; /* Light brown */
+    font-family: 'Bellerose', sans-serif;
+    font-size: 1.5rem;
     text-transform: uppercase;
     padding: 0.5rem 1rem;
     display: block;
@@ -90,7 +98,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    color: #e74c3c;
+    color: #dabe8e; /* Medium brown */
     transform: scale(1.1);
 }
 
@@ -166,7 +174,7 @@ divider {
     font-size: 1.5rem;
     color: #34495e;
     margin: 1rem 0;
-    text-shadow: 1px 4px 4px rgba(0, 0, 0.2, 0.5);
+    text-shadow: 1px 4px 4px rgba(0, 0, 0.1, 0.1);
 
 }
 
@@ -293,6 +301,9 @@ footer {
 @media (max-width: 768px) {
     .nav-toggle {
         display: block; /* Show toggle button on small screens */
+    }
+    nav h1{
+        display: none;
     }
     header nav {
         display: none; /* Hidden by default */
