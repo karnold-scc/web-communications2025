@@ -5,24 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tattoo artist booking page.">
     <title>Booking - Tattoo Art</title>
-    <link rel="stylesheet" href="css/booking.css">
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="css/booking.css" />
+
+    <!-- Optional: Three.js if needed for background animation -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script defer src="js/booking.js"></script> <!-- Link to external JS file -->
+    <script defer src="js/booking.js"></script>
+    <!-- Link to external JS (if needed). We'll show an inline script for toggling nav. -->
 </head>
 <body>
-<!-- Header -->
-<header>
-    <div>
-        <h1>Avery Lessard</h1>
-        <nav>
-            <ul>
-                <li class="about"><a href="index.html" data-after="about">about</a></li>
-                <li class="booking"><a href="booking.html" data-after="booking">booking</a></li>
-                <li class="aftercare"><a href="theprocess.html" data-after="aftercare">aftercare</a></li>
-                <li class="gallery"><a href="gallery.html" data-after="gallery">gallery</a></li>
 
-            </ul>
-        </nav>
+<!-- Header -->
+<header id="main-header">
+    <div class="header-container">
+        <!-- Brand Title -->
+        <a class="brand-title" href="index.html">Avery Lessard Tattoos</a>
+
+        <!-- Hamburger toggle (mobile only) -->
+        <button class="nav-toggle" aria-label="Toggle Menu">
+            &#9776;  <!-- This is the “hamburger” icon; you can swap it with an SVG or image -->
+        </button>
+
+        <!-- Nav Links -->
+        <ul class="nav-links">
+            <li class="about">
+                <a href="index.html" data-after="about">about</a>
+            </li>
+            <li class="booking">
+                <a href="booking.html" data-after="booking">booking</a>
+            </li>
+            <li class="aftercare">
+                <a href="theprocess.html" data-after="aftercare">aftercare</a>
+            </li>
+            <li class="gallery">
+                <a href="gallery.html" data-after="gallery">gallery</a>
+            </li>
+        </ul>
     </div>
 </header>
 
@@ -35,29 +54,36 @@
 <!-- Main Content -->
 <main>
     <h1>Booking</h1>
-    <p>Bring your tattoo ideas to life with Avery. Follow the steps below to book your appointment. We recommend checking our gallery for inspiration.</p>
+    <p>
+        Bring your tattoo ideas to life with Avery. Follow the steps below to book your appointment.
+        We recommend checking our gallery for inspiration.
+    </p>
 
     <div class="booking-section">
         <div>
             <h2>Booking Link</h2>
-            <a href="#" class="button-primary">Book Now</a>
+            <a href="https://form.jotform.com/220396971005253" class="button-primary">Book Now</a>
         </div>
         <div>
             <h3>Booking Status</h3>
-            <p>Booking is currently CLOSED.</p>
+            <p>Booking is now OPEN.</p>
         </div>
     </div>
 
     <!-- Gallery Link -->
     <div class="gallery-link">
-        <p>Need inspiration? Explore our <a href="#">Gallery</a> to view the latest artworks and tattoos.</p>
+        <p>
+            Need inspiration? Explore our
+            <a href="gallery.html">Gallery</a>
+            to view the latest artworks and tattoos.
+        </p>
     </div>
 </main>
 
-<!-- Footer -->
-<footer>
-    <div class="footer-container">
-        <!-- Left Side: Contact Form -->
+<!-- Form + Map Section (above footer) -->
+<section class="map-form-section">
+    <div class="map-form-container">
+        <!-- Contact Form -->
         <div class="footer-form">
             <p class="footer-note">ALL CLIENTS MUST BE 18 YEARS OLD OR OLDER.</p>
             <hr>
@@ -84,33 +110,40 @@
             </form>
         </div>
 
-        <!-- Right Side: Embedded Google Map & Info -->
+        <!-- Google Map -->
         <div class="footer-map">
             <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.132707992347!2d-83.03893092459844!3d42.31683913809273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b2d25a8a4bafb%3A0xd60b2e3b5ada7ce2!2s490%20Pelissier%20St%2C%20Windsor%2C%20ON%20N9A%204K9%2C%20Canada!5e0!3m2!1sen!2sca!4v1698520889452!5m2!1sen!2sca"
-                    width="100%"
-                    height="250"
-                    style="border:0;"
-                    allowfullscreen=""
                     loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-            <div class="footer-info">
-                <p><strong>Avery Lessard - Inkwell Tattoos Windsor</strong><br>
-                    490 Pelissier Street, Windsor, Ontario, N9A 4K9<br>
-                    CANADA</p>
-
-                <p><strong>HOURS</strong><br>
-                    MONDAY-TUESDAY: CLOSED<br>
-                    WEDNESDAY-SUNDAY: 1:00PM-8:00PM</p>
-
-                <p><strong>CONTACT</strong><br>
-                    <a href="mailto:lessardtattoos@gmail.com">lessardtattoos@gmail.com</a></p>
-
-                <p class="footer-parking">PARKING AVAILABLE NEAR THE STUDIO.</p>
-            </div>
         </div>
     </div>
+</section>
+
+<!-- Center-Aligned Footer -->
+<footer class="footer-bottom">
+    <p>
+        <strong>Avery Lessard - Inkwell Tattoos Windsor</strong><br>
+        490 Pelissier Street, Windsor, Ontario, N9A 4K9<br>
+        CANADA
+    </p>
+    <p>
+        <strong>CONTACT</strong><br>
+        <a href="mailto:lessardtattoos@gmail.com">lessardtattoos@gmail.com</a>
+    </p>
+    <p class="footer-parking">PARKING AVAILABLE NEAR THE STUDIO.</p>
 </footer>
+
+<!-- Simple Script for Hamburger Toggle -->
+<script>
+    const header = document.getElementById('main-header');
+    const navToggleBtn = document.querySelector('.nav-toggle');
+
+    navToggleBtn.addEventListener('click', () => {
+        header.classList.toggle('nav-open');
+    });
+</script>
+
 </body>
 </html>
