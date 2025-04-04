@@ -3,103 +3,90 @@
     font-family: "RoshidaValentine";
     src: url("../fonts/Roshida\ Valentines.ttf") format('truetype');
 }
-
-/* Load custom fonts */
 @font-face {
-    font-family: 'Lostar';
-    src: url('../fonts/Lostar.ttf') format('truetype');
+    font-family: "Bellarose";
+    src: url("../fonts/Bellerose.ttf") format('truetype');
 }
-
 @font-face {
-    font-family: 'Grand Paradiso';
-    src: url('../fonts/GrandParadiso-Regular.ttf') format('truetype');
+    font-family: "Lostar";
+    src: url("../fonts/Lostar.ttf") format('truetype');
 }
-
 @font-face {
-    font-family: 'Bellerose';
-    src: url('../fonts/Bellerose.ttf') format('truetype');
+    font-family: "GrandParadiso";
+    src: url("../fonts/GrandParadiso-Regular.ttf") format('truetype');
 }
 
 
 /* Global Styles */
+main {
+    padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 h1, h2, h3 {
-    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
+    font-family: 'GrandParadiso', sans-serif;
+    font-size: 2rem;
     color: #5a3915; /* Dark brown */
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
 
-body {
-    font-family: 'Bellerose', 'Verdana', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
 /* Header */
 header {
     background-color: #c4a484; /* Light brown */
-    padding: 1.5rem 2rem;
+    padding: .5rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
-    display: flex; /* Added to align nav content */
-    justify-content: flex-end; /* Aligns nav to the right */
-    align-items: center; /* Vertically centers content */
-}
-nav {
-    display: flex; /* Flex layout for h1 and ul */
-    justify-content: space-between; /* h1 on left, ul on right */
-    align-items: center; /* Vertically align h1 and ul */
-    width: 100%; /* Ensure nav takes full width */
 }
 
-nav h1 {
-    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
-    font-size: 1.5rem; /* Adjust size as needed */
-    color: #654321;
-    margin-right: 2rem; /* Optional: space between h1 and ul */
-}
-.nav-toggle {
-    display: none; /* Hidden by default on large screens */
-    background: none;
-    border: none;
-    color: #fff;
-    font-family: 'Grand Paradiso', sans-serif;
-    font-size: 1.2rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+header h1 {
+    font-family: "Lostar", sans-serif;
+    font-size: 4vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #654321; /* Brown */
+}
 nav ul {
     display: flex;
-    justify-content: flex-end; /* Align list items to the right */
     list-style: none;
+    padding: 0;
+    padding-bottom: 10px;
+    margin: 0;
 }
 
 nav ul li {
-    flex: 1;
-    text-align: center;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #654321; /* Brown */
+    text-decoration: none;
 }
 
 nav ul li a {
-    color: #fff;
+    color: #654321;
     text-decoration: none;
-    font-family: 'Grand Paradiso', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding: 0.5rem 1rem;
-    display: block;
-    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
-    color: #e74c3c;
-    transform: scale(1.1);
+nav ul li a:hover {
+    color: #dabe8e; /* Medium brown */
+    text-decoration: none;
+}
+
+@media (max-width: 1000px){
+    nav ul li {
+        font-size: 3vw;
+    }
+
 }
 
 /* Footer */
@@ -107,13 +94,19 @@ footer {
     background: #dabe8e; /* Light beige/brown */
     color: #654321; /* Brown */
     text-align: center;
-    padding: 2rem 0;
+    padding-top: 0;
+    padding-bottom: 0;
     margin-top: 2rem;
     font-family: 'Roboto', sans-serif;
 }
 
 .footer-container {
-    margin: 0 auto; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: fit-content;
+    margin: auto;
+    gap: 20px;
 }
 
 .footer-info {
@@ -123,7 +116,7 @@ footer {
 }
 
 .footer-info p {
-    margin: 10px 0;
+    margin-bottom: 15px;
 }
 
 .footer-info a {
