@@ -18,18 +18,14 @@
 
 
 /* Global Styles */
-main {
-    padding: 2rem;
-    padding-top: 0;
-    padding-bottom: 0;
-}
 
-h1, h2, h3 {
-    font-family: 'GrandParadiso', sans-serif;
-    font-size: 2rem;
-    color: #5a3915; /* Dark brown */
-    margin-bottom: 1rem;
-    text-transform: uppercase;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f9f9f9; /* Beige */
+    color: #654321; /* Brown */
 }
 
 /* Header */
@@ -87,6 +83,27 @@ nav ul li a:hover {
         font-size: 3vw;
     }
 
+}
+
+/* BODY */
+main {
+    padding: 2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'GrandParadiso', sans-serif;
+    font-size: 2rem;
+    color: #5a3915; /* Dark brown */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+li {
+    line-height: 1.8;
+    color: #6b4226; /* Light brown */
+    font-family: 'Bellarose', sans-serif;
 }
 
 /* Footer */
