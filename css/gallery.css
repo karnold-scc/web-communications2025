@@ -1,3 +1,8 @@
+
+/*====================
+        Header
+====================*/
+
 /* Font */
 @font-face {
     font-family: "RoshidaValentine";
@@ -17,8 +22,6 @@
 }
 
 
-/* Global Styles */
-
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -28,7 +31,6 @@ body {
     color: #654321; /* Brown */
 }
 
-/* Header */
 header {
     background-color: #c4a484; /* Light brown */
     padding: .5rem 1rem;
@@ -85,7 +87,9 @@ nav ul li a:hover {
 
 }
 
-/* BODY */
+/*====================
+        Body
+====================*/
 main {
     padding: 2rem;
     padding-top: 0;
@@ -106,7 +110,22 @@ li {
     font-family: 'Bellarose', sans-serif;
 }
 
-/* Footer */
+
+@media (max-width: 1000px){
+    .aftercare-section > div > figure {
+        display: none;
+    }
+    .aftercare-section > div > ul > li {
+        font-size: 1rem;
+    }
+    .aftercare-section > h2 {
+        font-size: 1.5rem;
+    }
+}
+/*====================
+        Footer
+====================*/
+
 footer {
     background: #dabe8e; /* Light beige/brown */
     color: #654321; /* Brown */
