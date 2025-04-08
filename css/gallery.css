@@ -31,6 +31,7 @@ body {
     color: #654321; /* Brown */
 }
 
+/* Header */
 header {
     background-color: #c4a484; /* Light brown */
     padding: .5rem 1rem;
@@ -38,53 +39,70 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+    display: flex; /* Added to align nav content */
+    justify-content: flex-end; /* Aligns nav to the right */
+    align-items: center; /* Vertically centers content */
+}
+nav {
+    display: flex; /* Flex layout for h1 and ul */
+    justify-content: space-between; /* h1 on left, ul on right */
+    align-items: center; /* Vertically align h1 and ul */
+    width: 100%; /* Ensure nav takes full width */
+
+
 }
 
-header div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+nav h1 {
+    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
+    font-size: 3rem; /* Adjust size as needed */
+    color: #654321;
+/*    margin-right: 2rem; !* Optional: space between h1 and ul *!
+    margin-bottom: 1rem;*/
+}
+.nav-toggle {
+    display: none; /* Hidden by default on large screens */
+    background: none;
+    border: none;
+    color: #654321;
+    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
 }
 
-header h1 {
-    font-family: "Lostar", sans-serif;
-    font-size: 4vw;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #654321; /* Brown */
-}
 nav ul {
     display: flex;
+    justify-content: flex-end; /* Align list items to the right */
     list-style: none;
-    padding: 0;
-    padding-bottom: 10px;
-    margin: 0;
 }
 
 nav ul li {
-    margin-left: 1.5rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    color: #654321; /* Brown */
-    text-decoration: none;
+    flex: 1;
+    text-align: center;
+    line-height: 1.8;
+    color: #6b4226; /* Light brown */
+    font-family: 'Bellarose', sans-serif;
 }
 
 nav ul li a {
-    color: #654321;
+
     text-decoration: none;
+    line-height: 1.8;
+    color: #6b4226; /* Light brown */
+    font-family: 'Bellerose', sans-serif;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    display: block;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: #dabe8e; /* Medium brown */
-    text-decoration: none;
-}
-
-@media (max-width: 1000px){
-    nav ul li {
-        font-size: 3vw;
-    }
-
+    transform: scale(1.1);
 }
 
 /*====================
@@ -172,4 +190,63 @@ footer {
     font-weight: bold;
     color: #6b4226; /* Light brown */
     margin-top: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .nav-toggle-div{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .nav-toggle {
+        display: flex;
+        flex: 0 0 20%;
+    }
+    .nav-title{
+        display: flex;
+        flex: 0 0 80%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    nav h1{
+        display: none;
+    }
+    header nav {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 100%; /* Position below header */
+        left: 0;
+        width: 100%;
+        background-color: #c4a484; /* Light brown */
+        box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+    }
+    header.nav-open nav {
+        display: block; /* Show when nav-open class is added */
+    }
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .profile-img {
+        max-width: 80%;
+        max-height: 500px;
+    }
+    .recycler-inner img {
+        width: 150px;
+        height: 187.5px;
+    }
 }
