@@ -3,33 +3,36 @@
         Header
 ====================*/
 
-/* Font */
+/* Load custom fonts */
 @font-face {
-    font-family: "RoshidaValentine";
-    src: url("../fonts/Roshida\ Valentines.ttf") format('truetype');
+    font-family: 'Lostar';
+    src: url('../fonts/Lostar.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: "Bellarose";
-    src: url("../fonts/Bellerose.ttf") format('truetype');
+    font-family: 'Grand Paradiso';
+    src: url('../fonts/GrandParadiso-Regular.ttf') format('truetype');
 }
+
 @font-face {
-    font-family: "Lostar";
-    src: url("../fonts/Lostar.ttf") format('truetype');
-}
-@font-face {
-    font-family: "GrandParadiso";
-    src: url("../fonts/GrandParadiso-Regular.ttf") format('truetype');
+    font-family: 'Bellerose';
+    src: url('../fonts/Bellerose.ttf') format('truetype');
 }
 
 
-body {
-    font-family: 'Roboto', sans-serif;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #f9f9f9; /* Beige */
-    color: #654321; /* Brown */
 }
+
+body {
+    font-family: 'Bellerose', 'Verdana', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
 
 /* Header */
 header {
