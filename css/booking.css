@@ -3,19 +3,19 @@
 ---------------------------- */
 @font-face {
     font-family: "RoshidaValentine";
-    src: url("../fonts/Roshida Valentines.ttf") format("truetype");
+    src: url("../fonts/Roshida\\ Valentines.ttf") format('truetype');
 }
 @font-face {
-    font-family: "Bellarose";
-    src: url("../fonts/Bellerose.ttf") format("truetype");
+    font-family: "Bellerose";
+    src: url("../fonts/Bellerose.ttf") format('truetype');
 }
 @font-face {
     font-family: "Lostar";
-    src: url("../fonts/Lostar.ttf") format("truetype");
+    src: url("../fonts/Lostar.ttf") format('truetype');
 }
 @font-face {
     font-family: "GrandParadiso";
-    src: url("../fonts/GrandParadiso-Regular.ttf") format("truetype");
+    src: url("../fonts/GrandParadiso-Regular.ttf") format('truetype');
 }
 
 /* ----------------------------
@@ -26,116 +26,93 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background: #f5f5dc; /* Beige */
-    color: #654321;     /* Brown */
+    font-family: 'Bellerose', 'Verdana', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* ----------------------------
-    HEADER & NAV
+    HEADER & NAVIGATION
+    (Styled to match About page)
 ---------------------------- */
-header {
+header#main-header {
     background-color: #c4a484; /* Light brown */
-    padding: 1rem 1.5rem;
+    padding: 0.5rem 1rem;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+    box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5);
 }
 
-/* Container for nav and brand (optional) */
-.header-container {
+/* Nav Toggle Div - container for burger and small title */
+.nav-toggle-div {
+    display: none;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+/* Hamburger button styling */
+.nav-toggle {
+    background: none;
+    border: none;
+    font-family: 'Lostar', 'GrandParadiso', sans-serif;
+    font-size: 1.2rem;
+    color: #654321;
+    cursor: pointer;
+}
+
+/* Small title styling for mobile */
+.nav-title {
+    margin-left: 0.5rem;
+    font-family: 'Lostar', 'GrandParadiso', sans-serif;
+    font-size: 1.5rem;
+    color: #654321;
+}
+
+/* Main nav area styling (Desktop) */
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
 }
-
-/* Example brand or site title */
-.header-container .brand-title {
-    font-family: "Lostar", sans-serif;
-    font-size: 2rem;
-    color: #654321; /* Brown */
-    text-decoration: none;
+nav h1 {
+    font-family: 'Lostar', 'GrandParadiso', sans-serif;
+    font-size: 3rem;
+    color: #654321;
 }
-
-/* Navigation Menu */
-.nav-links {
+nav ul {
     display: flex;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
-
-.nav-links li {
-    margin-left: 1.5rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: #654321; /* Brown */
-    cursor: pointer;
+nav ul li {
+    flex: 1;
+    text-align: center;
+    line-height: 1.8;
+    font-family: 'Bellerose', sans-serif;
+    font-size: 1.5rem;
+    color: #6b4226;
 }
-
-.nav-links li a {
-    color: #654321; /* Brown */
+nav ul li a {
     text-decoration: none;
+    display: block;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s;
+    text-transform: uppercase;
+    transition: color 0.3s ease, transform 0.3s ease;
+    color: #6b4226;
 }
-
-.nav-links li a:hover {
-    background-color: #ddd;
-    border-radius: 4px;
-}
-
-/* HAMBURGER ICON */
-.nav-toggle {
-    display: none; /* Hidden on desktop */
-    background: none;
-    border: none;
-    font-size: 1.6rem;
-    cursor: pointer;
-    color: #654321; /* Brown */
-}
-
-/* On small screens, the .nav-links are hidden unless .nav-open is active */
-@media (max-width: 768px) {
-    .header-container {
-        position: relative;
-    }
-
-    /* Show hamburger button */
-    .nav-toggle {
-        display: block;
-    }
-
-    /* By default, hide the nav menu */
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;       /* Just below the header */
-        left: 0;
-        width: 100%;
-        background: #c4a484;
-        padding: 1rem 0.5rem;
-        box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5);
-    }
-
-    /* When the header has nav-open, show the menu */
-    header.nav-open .nav-links {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin-left: 0;
-        margin-bottom: 0.5rem;
-        text-align: center;
-    }
+nav ul li a:hover,
+nav ul li a.active {
+    color: #dabe8e;
+    transform: scale(1.1);
 }
 
 /* ----------------------------
@@ -150,7 +127,6 @@ header {
     align-items: center;
     background: #eedc9c; /* Sand beige */
 }
-
 .hero canvas {
     position: absolute;
     top: 0;
@@ -159,14 +135,13 @@ header {
     height: 100%;
     z-index: 0;
 }
-
 .hero h1 {
     position: relative;
     z-index: 1;
-    font-family: "RoshidaValentine", sans-serif;
-    font-size: 2.5rem;
-    color: #5a3915; /* Dark brown */
-    text-shadow: 2px 2px 5px rgba(101, 67, 33, 0.7); /* Brown shadow */
+    font-family: "Lostar", sans-serif;
+    font-size: 2.5rem;  /* Adjust if needed */
+    color: #5a3915;
+    text-shadow: 2px 2px 5px rgba(101, 67, 33, 0.7);
     text-transform: uppercase;
     text-align: center;
     padding: 0 1rem;
@@ -180,20 +155,18 @@ main {
     margin: 2rem auto;
     padding: 0 1rem;
 }
-
 main h1,
 main h2,
 main h3 {
-    font-family: 'Roboto', sans-serif;
-    color: #5a3915; /* Dark brown */
+    font-family: 'Lostar', sans-serif;
+    color: #5a3915;
     margin-bottom: 1rem;
     text-transform: uppercase;
     text-align: left;
 }
-
 main p {
     line-height: 1.8;
-    color: #6b4226; /* Light brown */
+    color: #6b4226;
     margin-bottom: 1rem;
 }
 
@@ -210,17 +183,14 @@ main p {
     gap: 2rem;
     justify-content: space-between;
     margin-top: 2rem;
-
     max-width: 1200px;
     margin: 2rem auto;
 }
-
 .booking-section > div {
     flex: 1 1 300px;
 }
-
 .button-primary {
-    font-family: "RoshidaValentine", sans-serif;
+    font-family: "Bellerose", sans-serif;
     display: inline-block;
     padding: 0.75rem 1.5rem;
     background: #654321;
@@ -231,7 +201,6 @@ main p {
     font-weight: bold;
     transition: all 0.3s ease;
 }
-
 .button-primary:hover {
     background: #5a3915;
     transform: translateY(-3px);
@@ -244,14 +213,12 @@ main p {
     text-align: center;
     margin-top: 2rem;
 }
-
 .gallery-link a {
     font-size: 1.2rem;
     text-decoration: underline;
     font-weight: bold;
     color: #654321;
 }
-
 .gallery-link a:hover {
     color: #866442;
     text-shadow: 0 0 5px rgba(101, 67, 33, 0.6);
@@ -265,7 +232,6 @@ main p {
     margin: 2rem auto;
     padding: 0 1rem;
 }
-
 .map-form-container {
     display: flex;
     flex-wrap: wrap;
@@ -273,14 +239,12 @@ main p {
     align-items: flex-start;
     justify-content: center;
 }
-
 .footer-form,
 .footer-map {
     flex: 1 1 550px;
     max-width: 550px;
     min-width: 300px;
 }
-
 .footer-map iframe {
     width: 100%;
     height: 600px;
@@ -290,25 +254,40 @@ main p {
 /* ----------------------------
     FOOTER
 ---------------------------- */
-.footer-bottom {
+footer {
     background: #dabe8e;
     color: #654321;
     text-align: center;
-    padding: 2rem 1rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 2rem;
     font-family: 'Roboto', sans-serif;
 }
-
-.footer-bottom a {
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: fit-content;
+    margin: auto;
+    gap: 20px;
+}
+.footer-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #654321;
+}
+.footer-info p {
+    margin-bottom: 15px;
+}
+.footer-info a {
     color: #5a3915;
     text-decoration: none;
     font-weight: bold;
 }
-
-.footer-bottom a:hover {
+.footer-info a:hover {
     text-decoration: underline;
     color: #866442;
 }
-
 .footer-parking {
     text-transform: uppercase;
     font-weight: bold;
@@ -317,19 +296,17 @@ main p {
 }
 
 /* ----------------------------
-    FORM container adjustments
+    FORM CONTAINER ADJUSTMENTS
 ---------------------------- */
 .footer-form {
     max-width: 550px;
     margin: 0 auto;
 }
-
 .footer-form form {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-
 .footer-form label {
     display: block;
     font-size: 14px;
@@ -337,16 +314,13 @@ main p {
     margin-bottom: 0.3rem;
     color: #654321;
 }
-
 .name-container {
     display: flex;
     gap: 0.5rem;
 }
-
 .name-container input {
     flex: 1;
 }
-
 .footer-form input,
 .footer-form textarea {
     width: 100%;
@@ -358,12 +332,10 @@ main p {
     font-size: 14px;
     border-radius: 4px;
 }
-
 .footer-form textarea {
     min-height: 80px;
     resize: vertical;
 }
-
 .submit-button {
     margin-top: 0.5rem;
     padding: 10px;
@@ -377,72 +349,67 @@ main p {
     transition: all 0.3s ease;
     border-radius: 4px;
 }
-
 .submit-button:hover {
     background: #5a3915;
 }
 
 /* ----------------------------
     RESPONSIVE BREAKPOINTS
----------------------------- */
+---------------------------- *//* Responsive design */
 @media (max-width: 768px) {
-    .hero {
-        height: 40vh;
-    }
-    .hero h1 {
-        font-size: 1.75rem;
-    }
-
-    .booking-section {
-        flex-direction: column;
+    .nav-toggle-div{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2rem;
         align-items: center;
         text-align: center;
-        max-width: 90%;
-        padding: 1.5rem;
+        width: 100%;
     }
-
-    .map-form-container {
+    .nav-toggle {
+        display: flex;
+        flex: 0 0 20%;
+    }
+    .nav-title{
+        display: flex;
+        flex: 0 0 80%;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    nav h1{
+        display: none;
+    }
+    header nav {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 100%; /* Position below header */
+        left: 0;
+        width: 100%;
+        background-color: #c4a484; /* Light brown */
+        box-shadow: 0 2px 5px rgba(101, 67, 33, 0.5); /* Brown shadow */
+    }
+    header.nav-open nav {
+        display: block; /* Show when nav-open class is added */
+    }
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+    }
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    .intro {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
-
-    .footer-form,
-    .footer-map {
-        max-width: 100%;
-        flex: 1 1 auto;
+    .intro h1::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
-
-    .footer-map iframe {
-        height: 300px;
+    .profile-img {
+        max-width: 80%;
+        max-height: 500px;
     }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.5rem;
-    }
-    main h1, main h2, main h3 {
-        font-size: 1.2rem;
-    }
-    .button-primary {
-        font-size: 0.9rem;
-    }
-}
-
-/* ----------------------------
-   FINAL FORCE OVERRIDE
-   (Booking Section for Tiny Phones)
----------------------------- */
-@media (max-width: 480px) {
-    .booking-section {
-        /* Force smaller width & override any previous max-width */
-        max-width: 75% !important;
-        margin: 1rem auto !important;
-        padding: 1rem !important;
-    }
-
-    .booking-section > div {
-        flex: 1 1 auto !important;
-        text-align: center; /* optional: center the text */
+    .recycler-inner img {
+        width: 150px;
+        height: 187.5px;
     }
 }

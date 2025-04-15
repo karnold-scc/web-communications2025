@@ -87,5 +87,3 @@ window.addEventListener("resize", () => {
 
 // Start the animation loop
 animate();
-
-
