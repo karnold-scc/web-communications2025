@@ -249,11 +249,11 @@ divider {
     animation: fadeIn 1s ease-in-out forwards;
 }
 /* Apply tan tint to first three icons (Youtube, Facebook, LinkedIn) */
-.social-links ul li:nth-child(2) a img,
+/*.social-links ul li:nth-child(2) a img,
 .social-links ul li:nth-child(3) a img,
 .social-links ul li:nth-child(4) a img {
-    filter: sepia(1) hue-rotate(20deg) saturate(50%) brightness(110%); /* Tan color effect */
-}
+    filter: sepia(1) hue-rotate(20deg) saturate(50%) brightness(110%); !* Tan color effect *!
+}*/
 .social-links ul li a img {
     width: 30px;
     height: 30px;
