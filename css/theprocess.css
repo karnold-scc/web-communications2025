@@ -29,6 +29,7 @@ body {
     box-sizing: border-box;
     background: #f9f9f9; /* Beige */
     color: #654321; /* Brown */
+    line-height: 1.6;
 }
 /* 
 header {

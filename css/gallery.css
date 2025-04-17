@@ -7,6 +7,7 @@
 @font-face {
     font-family: 'Lostar';
     src: url('../fonts/Lostar.ttf') format('truetype');
+    font-display: swap; /* Added to ensure consistent loading */
 }
 
 @font-face {
@@ -56,7 +57,7 @@ nav {
 }
 
 nav h1 {
-    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
+    font-family: 'Lostar', sans-serif; /* Removed Grand Paradiso to isolate Lostar */;
     font-size: 3rem; /* Adjust size as needed */
     color: #654321;
 /*    margin-right: 2rem; !* Optional: space between h1 and ul *!
@@ -117,14 +118,18 @@ main {
     padding-bottom: 0;
 }
 
-h1, h2, h3 {
+h2, h3 {
     font-family: 'GrandParadiso', sans-serif;
     font-size: 2rem;
     color: #5a3915; /* Dark brown */
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
-
+h1 {
+    font-family: 'Lostar', 'Grand Paradiso', sans-serif;
+    font-size: 2rem;
+    color: #5a3915; /* Dark brown */
+}
 li {
     line-height: 1.8;
     color: #6b4226; /* Light brown */
